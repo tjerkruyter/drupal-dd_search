@@ -1,0 +1,12 @@
+name: Dept search
+type: module
+description: Dept Digital Search components
+core: 8.x
+package: Dept Digital
+php: 5.6
+dependencies:
+  - components
+component-libraries:
+  dd_search:
+    paths:
+      - components

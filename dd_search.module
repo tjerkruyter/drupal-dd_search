@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Contains dd_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dd_search_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the dd_search module.
+        case 'help.page.dd_search':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Dept Digital Search components') . '</p>';
+
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function dd_search_theme_suggestions_alter(
+    array &$suggestions,
+    array $variables,
+    $hook
+) {
+    if (isset($hook) && $hook === 'search_api_page') {
+        $suggestions[] = 'search_api_page__dd_search';
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function dd_search_theme($existing, $type, $theme, $path)
+{
+    return [
+        'search_api_page__dd_search' => [
+            'variables' => [
+                'form'             => null,
+                'search_title'     => null,
+                'no_of_results'    => null,
+                'no_results_found' => null,
+                'search_help'      => null,
+                'results'          => null,
+                'pager'            => null,
+            ],
+        ],
+        'input__search'              => [],
+    ];
+}

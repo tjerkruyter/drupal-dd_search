@@ -1,0 +1,18 @@
+{
+  "name": "drupal/dd_search",
+  "type": "drupal-module",
+  "description": "Provides frontend shelf components for drupal search_api",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.tamtam.nl",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "php@tamtam.nl",
+    "source": "https://bitbucket.org/tamtam-nl/dd_search"
+  },
+  "require": {
+    "drupal/components": "^1.1-alpha1"
+  }
+}
