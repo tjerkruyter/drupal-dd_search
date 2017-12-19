@@ -1,10 +1,12 @@
-{#{{ form }}#}
-{% from "@dd_search/search-field.twig" import searchField as searchField %}
-{{ searchField({
-  action:        'get',
-  submitText:    'Search',
-  id:            'search-form'
-}) }}
+{{ form }}
+{#{% from "@dd_search/search-field.twig" import searchField as searchField %}#}
+{#TODO: Add drupal hidden CSRF tokens to frontend search field form refer to object form #}
+{#{{ searchField({#}
+  {#action:        'get',#}
+  {#submitText:    'Search',#}
+  {#id:            'search-form'#}
+{#}) }}#}
+
 
 {% if search_title %}
   <h2>{{ search_title }}</h2>

@@ -55,6 +55,5 @@ function dd_search_theme($existing, $type, $theme, $path)
                 'pager'            => null,
             ],
         ],
-        'input__search'              => [],
     ];
 }
